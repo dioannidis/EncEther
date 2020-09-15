@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name Socket_Arduino_Uno)(type KiCad)(uri ${KIPRJMOD}/../../LIB_FP.PRETTY/Socket_Arduino_Uno.pretty)(options "")(descr ""))
+  (lib (name RJ45_MagJack_LMJTAB881X43M-L)(type KiCad)(uri ${KIPRJMOD}/../../LIB_FP.PRETTY/RJ45_MagJack_LMJTAB881X43M-L.pretty)(options "")(descr ""))
+)
