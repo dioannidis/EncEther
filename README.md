@@ -67,7 +67,7 @@ Those pictures are from v1. It didn't have the AT24MAC402-602 option and the CS/
 
 
 
-As you can see the AT24MAC402, in the following picture, is on the small red 8-Pin SOIC to DIP adapter on the breadboard.
+As you can see in the picture below, the AT24MAC402, is on the small red 8-Pin SOIC to DIP adapter on the breadboard.
 
 
 
