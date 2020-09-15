@@ -2,7 +2,7 @@
 
 ( version 2 )
 
-A single side through hole Arduino ethernet shield, designed in Kicad 5. 
+A single side, through hole, Arduino ethernet shield, designed in Kicad 5. 
 
 
 
@@ -45,7 +45,18 @@ Optionally, you can add an AT24MAC402-602 on a breakout pcb to the U4 socket to 
 
 Those pictures are from v1. It didn't have the AT24MAC402-602 option and the CS/SS Pin selection designed yet.
 
-![](/../master/IMAGES/enc28j60_buffered_tht_shield.png?raw=true&sanitize=true)
+
+
+![](/../master/IMAGES/EncEther-v1-top.jpg?raw=true&sanitize=true)
+![](/../master/IMAGES/EncEther-v1-bottom.jpg?raw=true&sanitize=true)
+
+
+
+As you can see the AT24MAC402, in the following picture, is on the small red breakout pcb on the breadboard.
+
+
+
+![](/../master/IMAGES/EncEther-v1-uno.jpg?raw=true&sanitize=true)
 
 
 -----
