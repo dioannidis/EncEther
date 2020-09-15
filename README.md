@@ -24,7 +24,7 @@ A single side, through hole, Arduino ethernet shield, designed in Kicad 5.
 
 The CS/SS ( chip select / slave select ) signal can be connected to Arduino Pin 10 or Pin 9 using the J3 jumper.
 
-* Jumper on the 1-2 pins connects CS/SS to Arduino Pin 10.
+* Jumper on the 1-2 pins connects CS/SS to Arduino Pin 10. ( default )
 * Jumper on the 2-3 pins connects CS/SS to Arduino Pin 9.
 
 
