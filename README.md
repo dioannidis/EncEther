@@ -47,7 +47,7 @@ Optionally, you can populate the U4 socket with an AT24MAC402-602 on a breakout 
 
 ### Examples
 
-( in EXAMPLES directory )
+( in EXAMPLES directory. Of course the examples work with any ENC28J60 board / module. )
 
  * EthernetRest 
   
