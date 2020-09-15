@@ -39,7 +39,13 @@ Optionally, you can populate the U4 socket with an AT24MAC402-602 on a breakout 
 
 ### Examples
 
-( todo )
+( in EXAMPLES directory )
+
+ * EthernetRest 
+  
+   Uses the UIPEthernet and aRest libraries.
+   
+   Using the ![aRest API](https://github.com/marcoschwartz/aREST#api-documentation) you can control all digital and analog pins and / or executing custom functions or read custom variables.
 
 ### Gallery
 

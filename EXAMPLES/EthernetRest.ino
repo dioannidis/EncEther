@@ -5,7 +5,9 @@
 */
 
 // UIPEthernet configuration.
-// Edit the uipethernet-conf.h file.
+
+// Edit the <Arduino-Libraries-path>\UIPEthernet\utility\uipethernet-conf.h file
+// and change the values as below.
 
 //#define UIP_SOCKET_NUMPACKETS     3
 //#define UIP_CONF_MAX_CONNECTIONS  2
