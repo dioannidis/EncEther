@@ -19,7 +19,15 @@ A single side, through hole, Arduino ethernet shield, designed in Kicad 5.
 ( all the components datasheets can be found in the DATASHEETS directory )
 
 
-### Configuration 
+### Board Info / Tips
+
+* As a single side board jumper wires are hard to avoid. Currently, exists 14 jumper wires, which are to be soldered first.
+* The L1 4μH inductor, is for EMC ( as per datasheet ), so you can replace it with a jumper wire.
+* The R3, R4, R11 and R12 are 49.9 Ω 1% 1/4W resistors ( as per datasheet ) but I'm using 51 Ω 1% 1/4W with success. The 49.9Ω 1% ones are hard to find ( at least I can't find them easily ).
+* Because some jumper wires are routed under the sockets, use precision sockets which have more room under them.
+* The MagJack I use is the LMJTAB881243ML from AMPHENOL. You can find it ![here](https://www.tme.eu/en/details/lmjtab881243m-l/rj-connectors/amphenol/lmjtab881243ml/).
+
+### Board Configuration 
 
 
 The CS/SS ( chip select / slave select ) signal can be connected to Arduino Pin 10 or Pin 9 using the J3 jumper.
