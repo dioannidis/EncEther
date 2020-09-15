@@ -39,7 +39,7 @@ Optionally, you can populate the U4 socket with an AT24MAC402-602 on a breakout 
 
 ### Examples
 
-( todo )
+Added the EthernetRest example ( in EXAMPLES directory ) using the UIPEthernet and aRest libraries. 
 
 ### Gallery
 
