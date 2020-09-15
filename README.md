@@ -6,7 +6,7 @@ A single side, through hole, Arduino ethernet shield, designed in Kicad 5.
 
 
 
-![](/../master/IMAGES/enc28j60_buffered_tht_shield.png?raw=true&sanitize=true)
+![](https://scm.nephelae.eu/attachments/e00935e9-16aa-4685-a2b0-f74aa86cb5e5)
 
 
 
@@ -47,8 +47,8 @@ Those pictures are from v1. It didn't have the AT24MAC402-602 option and the CS/
 
 
 
-![](/../master/IMAGES/EncEther-v1-top.jpg?raw=true&sanitize=true)
-![](/../master/IMAGES/EncEther-v1-bottom.jpg?raw=true&sanitize=true)
+![](https://scm.nephelae.eu/attachments/b76a6e99-8b8f-4dfb-836d-3518fe474f24)
+![](https://scm.nephelae.eu/attachments/8d4cf74e-7e1a-4a05-a1f8-1e81f1515c8c)
 
 
 
@@ -56,7 +56,7 @@ As you can see the AT24MAC402, in the following picture, is on the small red bre
 
 
 
-![](/../master/IMAGES/EncEther-v1-uno.jpg?raw=true&sanitize=true)
+![](https://scm.nephelae.eu/attachments/55d9cd06-ae08-4b33-aa3e-fe5f2020ff65)
 
 
 -----
