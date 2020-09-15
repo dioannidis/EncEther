@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name 74HCT125N)(type Legacy)(uri ${KIPRJMOD}/../../LIB_SYMBOLS/74HCT125N.lib)(options "")(descr ""))
   (lib (name RJ45_MagJack_LMJTAB881X43M-L)(type Legacy)(uri ${KIPRJMOD}/../../LIB_SYMBOLS/RJ45_MagJack_LMJTAB881X43M-L.lib)(options "")(descr ""))
+  (lib (name AT24MAC402-SSHM)(type Legacy)(uri ${KIPRJMOD}/../../LIB_SYMBOLS/AT24MAC402-SSHM.lib)(options "")(descr ""))
 )
