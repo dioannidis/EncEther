@@ -26,6 +26,7 @@ A single side, through hole, Arduino ethernet shield, designed in Kicad 5.
 * The R3, R4, R11 and R12 are 49.9 Ω 1% 1/4W resistors ( as per datasheet ) but I'm using 51 Ω 1% 1/4W with success. The 49.9Ω 1% ones are hard to find ( at least I can't find them easily ).
 * Because some jumper wires are routed under the sockets, use precision sockets which have more room under them.
 * The MagJack I use is the LMJTAB881243ML from AMPHENOL. You can find it at [TME](https://www.tme.eu/en/details/lmjtab881243m-l/rj-connectors/amphenol/lmjtab881243ml) or at [Grobotronics](https://grobotronics.com/rj45-ethernet-magjack-compatible.html) ( cheaper ).
+* The wakeup and clkout pins of ENC28J60 are not exposed. As an UNO shield we don't need to provide clock to the MCU, it has it's own. And AFAIK, UIPEthernet doesn't implement the wakeup function.
 
 ### Board Configuration 
 
@@ -51,7 +52,7 @@ Optionally, you can populate the U4 socket with an AT24MAC402-602 on a breakout 
 
  * EthernetRest 
   
-   Uses the UIPEthernet and aRest libraries.
+   Uses the ![UIPEthernet](https://github.com/UIPEthernet/UIPEthernet) and ![aRest](https://github.com/marcoschwartz/aREST) libraries.
    
    Using the ![aRest API](https://github.com/marcoschwartz/aREST#api-documentation) you can control all digital and analog pins and / or executing custom functions or read custom variables.
 
