@@ -34,7 +34,7 @@ The Interrupt pin from the ENC28J60 it can be connected to Arduino Pin 9 or Pin 
 * Jumper on the 4-5 pins connects the ENC28J60's interrupt pin to Arduino Pin 8.
 
 
-Optionally, you can populate the U4 socket with an AT24MAC402-602 on a breakout pcb to have a legit MAC Address and an extra 2Kbit serial EEPROM if you needed .
+Optionally, you can populate the U4 socket with an AT24MAC402-602 on a breakout pcb to have a legit MAC Address and an extra 2Kbit serial EEPROM.
 
 
 ### Examples
