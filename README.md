@@ -43,7 +43,7 @@ The Interrupt pin from the ENC28J60 it can be connected to Arduino Pin 9 or Pin 
 * Jumper on the 4-5 pins connects the ENC28J60's interrupt pin to Arduino Pin 8.
 
 
-Optionally, you can populate the U4 socket with an AT24MAC402-602 on a 8-Pin SOIC to DIP adapter ( something like ![this](https://www.sparkfun.com/products/13655) or ![this](https://www.adafruit.com/product/1212) ) to have a legit MAC Address and an extra 2Kbit serial EEPROM.
+Optionally, you can populate the U4 socket with an AT24MAC402-602 on a 8-Pin SOIC to DIP adapter ( something like [this](https://www.sparkfun.com/products/13655) or [this](https://www.adafruit.com/product/1212) ) to have a legit MAC Address and an extra 2Kbit serial EEPROM.
 
 
 ### Examples
