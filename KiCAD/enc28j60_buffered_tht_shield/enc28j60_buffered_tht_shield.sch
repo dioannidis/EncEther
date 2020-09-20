@@ -301,39 +301,6 @@ F 3 "" H 6900 3230 50  0001 C CNN
 	1    6900 3230
 	1    0    0    -1  
 $EndComp
-$Comp
-L enc28j60_buffered_tht_shield-rescue:CP_Small-Device C11
-U 1 1 5C1A4FA8
-P 6180 2770
-F 0 "C11" H 6093 2816 50  0000 R CNN
-F 1 "10 μF ( Low ESR )" H 6093 2725 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_Tantal_D4.5mm_P2.50mm" H 6180 2770 50  0001 C CNN
-F 3 "~" H 6180 2770 50  0001 C CNN
-	1    6180 2770
-	1    0    0    -1  
-$EndComp
-$Comp
-L enc28j60_buffered_tht_shield-rescue:CP_Small-Device C12
-U 1 1 5C1A5054
-P 7420 2770
-F 0 "C12" H 7508 2816 50  0000 L CNN
-F 1 "10 μF" H 7508 2725 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 7420 2770 50  0001 C CNN
-F 3 "~" H 7420 2770 50  0001 C CNN
-	1    7420 2770
-	1    0    0    -1  
-$EndComp
-$Comp
-L enc28j60_buffered_tht_shield-rescue:CP_Small-Device C13
-U 1 1 5C1A62E2
-P 7870 2770
-F 0 "C13" H 7958 2816 50  0000 L CNN
-F 1 "100 μF" H 7958 2725 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 7870 2770 50  0001 C CNN
-F 3 "~" H 7870 2770 50  0001 C CNN
-	1    7870 2770
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6180 2670 6180 2600
 Wire Wire Line
@@ -734,17 +701,6 @@ F 1 "2.32 kΩ 1%" H 5569 6915 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 5510 6960 50  0001 C CNN
 F 3 "~" H 5510 6960 50  0001 C CNN
 	1    5510 6960
-	1    0    0    -1  
-$EndComp
-$Comp
-L enc28j60_buffered_tht_shield-rescue:CP_Small-Device C8
-U 1 1 5F537974
-P 4600 7070
-F 0 "C8" H 4688 7116 50  0000 L CNN
-F 1 "10 μF ( Low ESR )" H 4688 7025 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_Tantal_D4.5mm_P2.50mm" H 4600 7070 50  0001 C CNN
-F 3 "~" H 4600 7070 50  0001 C CNN
-	1    4600 7070
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1535,4 +1491,48 @@ Wire Wire Line
 	9320 3100 9320 3140
 Text Notes 9670 6430 0    50   ~ 0
 MAC / EPPROM ADDRESS \nA_A0 -> GND = 0\nA_A0 -> VCC = 1
+$Comp
+L Device:C_Polarized_Small C11
+U 1 1 5F68F556
+P 6180 2770
+F 0 "C11" H 5940 2810 50  0000 L CNN
+F 1 "10 μF ( Low ESR )" H 5370 2690 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_Tantal_D4.5mm_P2.50mm" H 6180 2770 50  0001 C CNN
+F 3 "~" H 6180 2770 50  0001 C CNN
+	1    6180 2770
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Polarized_Small C12
+U 1 1 5F69126E
+P 7420 2770
+F 0 "C12" H 7200 2740 50  0000 L CNN
+F 1 "10 μF" H 7120 2650 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 7420 2770 50  0001 C CNN
+F 3 "~" H 7420 2770 50  0001 C CNN
+	1    7420 2770
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Polarized_Small C13
+U 1 1 5F692BEF
+P 7870 2770
+F 0 "C13" H 7650 2740 50  0000 L CNN
+F 1 "100 μF" H 7570 2650 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 7870 2770 50  0001 C CNN
+F 3 "~" H 7870 2770 50  0001 C CNN
+	1    7870 2770
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Polarized_Small C8
+U 1 1 5F6934EE
+P 4600 7070
+F 0 "C8" H 4720 7140 50  0000 L CNN
+F 1 "10 μF ( Low ESR )" H 4710 7010 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_Tantal_D4.5mm_P2.50mm" H 4600 7070 50  0001 C CNN
+F 3 "~" H 4600 7070 50  0001 C CNN
+	1    4600 7070
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
