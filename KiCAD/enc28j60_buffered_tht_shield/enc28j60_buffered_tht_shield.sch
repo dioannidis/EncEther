@@ -4,19 +4,15 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "ENC Ethernet"
-Date "2020-09-15"
-Rev "v2"
+Title "EncEther"
+Date "2020-09-20"
+Rev "v3"
 Comp "Nephelae"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Label 8970 1440 1    60   ~ 0
-Vin
-Text Label 9370 1440 1    60   ~ 0
-IOREF
 Text Label 8920 2490 0    60   ~ 0
 A0
 Text Label 8920 2590 0    60   ~ 0
@@ -25,10 +21,6 @@ Text Label 8920 2690 0    60   ~ 0
 A2
 Text Label 8920 2790 0    60   ~ 0
 A3
-Text Label 8920 2890 0    60   ~ 0
-A4(SDA)
-Text Label 8920 2990 0    60   ~ 0
-A5(SCL)
 Text Label 10570 2990 0    60   ~ 0
 0(Rx)
 Text Label 10570 2790 0    60   ~ 0
@@ -77,19 +69,6 @@ F 1 "Power" V 9720 1890 50  0000 C CNN
 F 2 "Socket_Arduino_Uno:Socket_Strip_Arduino_1x08" V 9770 1890 20  0000 C CNN
 F 3 "" H 9620 1890 50  0000 C CNN
 	1    9620 1890
-	1    0    0    -1  
-$EndComp
-Text Label 8670 1790 0    60   ~ 0
-Reset
-$Comp
-L power:+3.3V #PWR03
-U 1 1 56D70538
-P 9170 1440
-F 0 "#PWR03" H 9170 1290 50  0001 C CNN
-F 1 "+3.3V" V 9170 1690 50  0000 C CNN
-F 2 "" H 9170 1440 50  0000 C CNN
-F 3 "" H 9170 1440 50  0000 C CNN
-	1    9170 1440
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -217,8 +196,6 @@ Connection ~ 9320 2190
 Wire Wire Line
 	8970 2290 8970 1440
 Wire Wire Line
-	9070 1990 9070 1940
-Wire Wire Line
 	9420 2490 8920 2490
 Wire Wire Line
 	9420 2590 8920 2590
@@ -299,7 +276,7 @@ F 3 "~" H 10910 6870 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9320 2190 9320 3140
+	9320 2190 9320 3100
 Wire Wire Line
 	10320 1490 10320 3140
 $Comp
@@ -325,7 +302,7 @@ F 3 "" H 6900 3230 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP_Small C11
+L enc28j60_buffered_tht_shield-rescue:CP_Small-Device C11
 U 1 1 5C1A4FA8
 P 6180 2770
 F 0 "C11" H 6093 2816 50  0000 R CNN
@@ -336,7 +313,7 @@ F 3 "~" H 6180 2770 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP_Small C12
+L enc28j60_buffered_tht_shield-rescue:CP_Small-Device C12
 U 1 1 5C1A5054
 P 7420 2770
 F 0 "C12" H 7508 2816 50  0000 L CNN
@@ -347,7 +324,7 @@ F 3 "~" H 7420 2770 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP_Small C13
+L enc28j60_buffered_tht_shield-rescue:CP_Small-Device C13
 U 1 1 5C1A62E2
 P 7870 2770
 F 0 "C13" H 7958 2816 50  0000 L CNN
@@ -417,19 +394,17 @@ F 3 "" H 5900 2500 50  0000 C CNN
 	1    5900 2500
 	1    0    0    -1  
 $EndComp
-Text Label 9070 1650 1    50   ~ 0
-VCC
 Wire Wire Line
-	8280 6100 8160 6100
+	7670 6170 7550 6170
 Wire Wire Line
-	8280 6200 8160 6200
+	7670 6270 7550 6270
 Wire Wire Line
-	8280 6300 8160 6300
-Text Label 8280 6100 0    60   ~ 0
+	7670 6370 7550 6370
+Text Label 7670 6170 0    60   ~ 0
 9(**)
-Text Label 8280 6300 0    60   ~ 0
+Text Label 7670 6370 0    60   ~ 0
 8
-Text Label 8280 6200 0    50   ~ 0
+Text Label 7670 6270 0    50   ~ 0
 INT_PIN
 Wire Wire Line
 	7870 2600 7960 2600
@@ -440,17 +415,14 @@ Wire Wire Line
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5FF4F7BA
-P 9070 1940
-F 0 "#FLG0101" H 9070 2015 50  0001 C CNN
-F 1 "PWR_FLAG" V 9070 2067 50  0000 L CNN
-F 2 "" H 9070 1940 50  0001 C CNN
-F 3 "~" H 9070 1940 50  0001 C CNN
-	1    9070 1940
+P 9070 1620
+F 0 "#FLG0101" H 9070 1695 50  0001 C CNN
+F 1 "PWR_FLAG" V 9070 1747 50  0000 L CNN
+F 2 "" H 9070 1620 50  0001 C CNN
+F 3 "~" H 9070 1620 50  0001 C CNN
+	1    9070 1620
 	0    -1   -1   0   
 $EndComp
-Connection ~ 9070 1940
-Wire Wire Line
-	9070 1940 9070 1340
 Wire Wire Line
 	5000 6350 5000 6400
 Connection ~ 5000 6350
@@ -759,13 +731,13 @@ U 1 1 5F994111
 P 5510 6960
 F 0 "R2" H 5569 7006 50  0000 L CNN
 F 1 "2.32 kΩ 1%" H 5569 6915 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" H 5510 6960 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 5510 6960 50  0001 C CNN
 F 3 "~" H 5510 6960 50  0001 C CNN
 	1    5510 6960
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP_Small C8
+L enc28j60_buffered_tht_shield-rescue:CP_Small-Device C8
 U 1 1 5F537974
 P 4600 7070
 F 0 "C8" H 4688 7116 50  0000 L CNN
@@ -883,7 +855,7 @@ F 3 "~" H 2480 6450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7550 720  7550 840 
+	7550 720  7550 800 
 Wire Wire Line
 	7550 1860 7550 1740
 Wire Wire Line
@@ -894,12 +866,6 @@ Wire Wire Line
 	8170 1440 8050 1440
 Text Label 8170 1440 0    60   ~ 0
 Reset
-Text Label 8170 1340 0    60   ~ 0
-13(SCK)
-Text Label 8170 1140 0    60   ~ 0
-12(MISO)
-Text Label 8170 1240 0    60   ~ 0
-11(**/MOSI)
 Wire Wire Line
 	8170 1240 8050 1240
 $Comp
@@ -907,7 +873,7 @@ L Connector:AVR-ISP-6 J1
 U 1 1 5F79438B
 P 7650 1340
 F 0 "J1" H 7960 970 50  0000 R CNN
-F 1 "AVR-ISP-6" H 8120 1800 50  0000 R CNN
+F 1 "AVR-ISP-6" H 8090 850 50  0000 R CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Vertical" V 7400 1390 50  0001 C CNN
 F 3 " ~" H 6375 790 50  0001 C CNN
 	1    7650 1340
@@ -939,7 +905,7 @@ $EndComp
 Wire Wire Line
 	2220 6650 2940 6650
 NoConn ~ 2940 6850
-Text Label 7550 810  1    50   ~ 0
+Text Label 7550 720  2    50   ~ 0
 VCC
 $Comp
 L power:GND #PWR0109
@@ -957,7 +923,7 @@ L AT24MAC402-SSHM:AT24MAC402-SSHM U4
 U 1 1 5F5F7357
 P 5850 1380
 F 0 "U4" H 5650 1650 50  0000 C CNN
-F 1 "AT24MAC402-SSHM" H 6330 1040 50  0000 C CNN
+F 1 "AT24MAC402-SSHM" H 6250 1070 50  0000 C CNN
 F 2 "Package_DIP:DIP-8_W7.62mm_Socket_LongPads" H 5850 1380 50  0001 C CIN
 F 3 "" H 5850 1380 50  0001 C CNN
 	1    5850 1380
@@ -1214,8 +1180,8 @@ $Comp
 L Device:R_Small R4
 U 1 1 5F537985
 P 1550 1380
-F 0 "R4" H 1491 1334 50  0000 R CNN
-F 1 "49.9 Ω 1%" H 1491 1425 50  0000 R CNN
+F 0 "R4" H 1500 1340 50  0000 R CNN
+F 1 "49.9 Ω 1%" H 1500 1430 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" H 1550 1380 50  0001 C CNN
 F 3 "~" H 1550 1380 50  0001 C CNN
 	1    1550 1380
@@ -1225,8 +1191,8 @@ $Comp
 L Device:R_Small R3
 U 1 1 5C48EA4B
 P 1370 1380
-F 0 "R3" H 1428 1334 50  0000 L CNN
-F 1 "49.9 Ω 1%" H 1428 1425 50  0000 L CNN
+F 0 "R3" H 1420 1340 50  0000 L CNN
+F 1 "49.9 Ω 1%" H 1420 1420 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" H 1370 1380 50  0001 C CNN
 F 3 "~" H 1370 1380 50  0001 C CNN
 	1    1370 1380
@@ -1270,8 +1236,6 @@ Wire Wire Line
 	1460 2790 1550 2790
 Connection ~ 1460 2790
 Wire Wire Line
-	1460 2170 1460 2790
-Wire Wire Line
 	1220 2790 1360 2790
 Wire Wire Line
 	1220 2880 1220 2790
@@ -1296,8 +1260,8 @@ $Comp
 L Device:R_Small R12
 U 1 1 5F99411A
 P 1550 2640
-F 0 "R12" H 1491 2594 50  0000 R CNN
-F 1 "49.9 Ω 1%" H 1491 2685 50  0000 R CNN
+F 0 "R12" H 1500 2600 50  0000 R CNN
+F 1 "49.9 Ω 1%" H 1510 2690 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" H 1550 2640 50  0001 C CNN
 F 3 "~" H 1550 2640 50  0001 C CNN
 	1    1550 2640
@@ -1307,8 +1271,8 @@ $Comp
 L Device:R_Small R11
 U 1 1 5C41FABA
 P 1360 2640
-F 0 "R11" H 1418 2594 50  0000 L CNN
-F 1 "49.9 Ω 1%" H 1418 2685 50  0000 L CNN
+F 0 "R11" H 1410 2600 50  0000 L CNN
+F 1 "49.9 Ω 1%" H 1420 2690 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" H 1360 2640 50  0001 C CNN
 F 3 "~" H 1360 2640 50  0001 C CNN
 	1    1360 2640
@@ -1376,8 +1340,6 @@ Wire Wire Line
 Wire Wire Line
 	6370 1280 6250 1280
 Wire Wire Line
-	5450 1580 5330 1580
-Wire Wire Line
 	5450 1430 5330 1430
 Wire Wire Line
 	5450 1330 5330 1330
@@ -1401,18 +1363,10 @@ $EndComp
 Text Label 5850 910  1    50   ~ 0
 VCC
 Wire Wire Line
-	5330 1230 5330 1330
-Wire Wire Line
 	5330 1860 5850 1860
-Connection ~ 5330 1330
 Wire Wire Line
 	5330 1330 5330 1430
 Connection ~ 5330 1430
-Wire Wire Line
-	5330 1430 5330 1580
-Connection ~ 5330 1580
-Wire Wire Line
-	5330 1580 5330 1860
 Connection ~ 5850 1860
 Wire Wire Line
 	5850 1860 5850 1900
@@ -1428,26 +1382,26 @@ Wire Notes Line
 	6980 6470 10670 6470
 Wire Notes Line
 	10670 6470 10670 5710
-Text Notes 6140 1990 0    50   ~ 0
-MAC / EEPROM
-Text Label 8280 5900 0    60   ~ 0
+Text Notes 6220 2090 0    50   ~ 0
+WP PIN FLOATING\nWRITE PROTECT\nBY SOFTWARE ONLY
+Text Label 7670 5970 0    60   ~ 0
 10(**/SS)
 Wire Wire Line
-	8280 6000 8160 6000
+	7670 6070 7550 6070
 Wire Wire Line
-	8280 5900 8160 5900
+	7670 5970 7550 5970
 $Comp
 L Connector:Conn_01x05_Male J3
 U 1 1 5F971989
-P 7960 6100
-F 0 "J3" H 7810 6320 50  0000 R CNN
-F 1 "Conn_01x05_Male" H 7750 5990 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7960 6100 50  0001 C CNN
-F 3 "~" H 7960 6100 50  0001 C CNN
-	1    7960 6100
+P 7350 6170
+F 0 "J3" H 7200 6390 50  0000 R CNN
+F 1 "Conn_01x05_Male" H 7920 6530 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7350 6170 50  0001 C CNN
+F 3 "~" H 7350 6170 50  0001 C CNN
+	1    7350 6170
 	1    0    0    -1  
 $EndComp
-Text Label 8280 6000 0    60   ~ 0
+Text Label 7670 6070 0    60   ~ 0
 SS_PIN
 Text Label 2440 5750 2    60   ~ 0
 SS_PIN
@@ -1483,6 +1437,102 @@ Wire Notes Line
 	6990 2110 6990 730 
 Wire Notes Line
 	5260 730  6990 730 
-Text Notes 9180 6330 0    50   ~ 0
-Chip Select / Slave Select ( 10, 9 )\nInterrupt ( 9, 8 )
+Text Notes 7890 6440 0    50   ~ 0
+CS / SS ( 10, 9 )\nInterrupt ( 9, 8 )
+Wire Wire Line
+	9530 6180 9410 6180
+Wire Wire Line
+	9530 6080 9410 6080
+Wire Wire Line
+	9530 5980 9410 5980
+$Comp
+L power:GND #PWR011
+U 1 1 5F6EF989
+P 9530 6180
+F 0 "#PWR011" H 9530 5930 50  0001 C CNN
+F 1 "GND" H 9530 6030 50  0000 C CNN
+F 2 "" H 9530 6180 50  0000 C CNN
+F 3 "" H 9530 6180 50  0000 C CNN
+	1    9530 6180
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 5F6ACA69
+P 9210 6080
+F 0 "J4" H 9090 6110 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 9390 6350 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9210 6080 50  0001 C CNN
+F 3 "~" H 9210 6080 50  0001 C CNN
+	1    9210 6080
+	1    0    0    -1  
+$EndComp
+Text Label 9530 5980 0    50   ~ 0
+VCC
+Wire Wire Line
+	5330 1430 5330 1860
+NoConn ~ 5450 1580
+Wire Wire Line
+	1460 2170 1460 2790
+Text Label 9530 6080 0    50   ~ 0
+A_A0
+Text Label 5330 1230 0    50   ~ 0
+A_A0
+NoConn ~ 8170 1140
+NoConn ~ 8170 1240
+NoConn ~ 8170 1340
+NoConn ~ 8920 2890
+NoConn ~ 8920 2990
+NoConn ~ 8920 2790
+NoConn ~ 8920 2690
+NoConn ~ 8920 2590
+NoConn ~ 8920 2490
+NoConn ~ 10570 2290
+NoConn ~ 10570 2390
+NoConn ~ 10570 2490
+NoConn ~ 10570 2590
+NoConn ~ 10570 2690
+NoConn ~ 10570 2790
+NoConn ~ 10570 2890
+NoConn ~ 10570 2990
+NoConn ~ 10570 1390
+NoConn ~ 9170 1440
+NoConn ~ 8670 1790
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FBED4FA
+P 7550 800
+F 0 "#FLG0102" H 7550 875 50  0001 C CNN
+F 1 "PWR_FLAG" V 7550 927 50  0000 L CNN
+F 2 "" H 7550 800 50  0001 C CNN
+F 3 "~" H 7550 800 50  0001 C CNN
+	1    7550 800 
+	0    1    1    0   
+$EndComp
+Connection ~ 7550 800 
+Wire Wire Line
+	7550 800  7550 840 
+Connection ~ 9070 1620
+Wire Wire Line
+	9070 1620 9070 1340
+Wire Wire Line
+	9070 1620 9070 1990
+NoConn ~ 8970 1440
+NoConn ~ 9370 1440
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5FC2F789
+P 9320 3100
+F 0 "#FLG0103" H 9320 3175 50  0001 C CNN
+F 1 "PWR_FLAG" V 9320 3227 50  0000 L CNN
+F 2 "" H 9320 3100 50  0001 C CNN
+F 3 "~" H 9320 3100 50  0001 C CNN
+	1    9320 3100
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9320 3100
+Wire Wire Line
+	9320 3100 9320 3140
+Text Notes 9670 6430 0    50   ~ 0
+MAC / EPPROM ADDRESS \nA_A0 -> GND = 0\nA_A0 -> VCC = 1
 $EndSCHEMATC
